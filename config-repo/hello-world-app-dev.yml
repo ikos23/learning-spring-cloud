@@ -1,6 +1,3 @@
-server:
-  port: 8011
-  
 hello:
   world:
     username: Foo Bar  
