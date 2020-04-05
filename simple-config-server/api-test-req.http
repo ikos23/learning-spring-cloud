@@ -1,0 +1,52 @@
+### If everything is ok - this should return JSON like this:
+# {
+#  "name": "hello-world-app",
+#  "profiles": [
+#    "default"
+#  ],
+#  "label": null,
+#  "version": "107fb54bcc413711b2f248376cd9392cf9af1699",
+#  "state": null,
+#  "propertySources": [
+#    {
+#      "name": "https://<github...>/config-repo/hello-world-app.properties",
+#      "source": {
+#        "test-prop": "test value"
+#      }
+#    }
+#  ]
+# }
+
+GET http://localhost:8001/hello-world-app/default
+Accept: application/json
+
+### If everything is ok - this should return JSON like this:
+# {
+#  "name": "hello-world-app",
+#  "profiles": [
+#    "dev"
+#  ],
+#  "label": null,
+#  "version": "107fb54bcc413711b2f248376cd9392cf9af1699",
+#  "state": null,
+#  "propertySources": [
+#    {
+#      "name": "https://<github...>/config-repo/hello-world-app-dev.yml",
+#      "source": {
+#        "hello.world.username": "Foo Bar",
+#        "test": "test123"
+#      }
+#    },
+#    {
+#      "name": "https://<github...>/config-repo/hello-world-app.properties",
+#      "source": {
+#        "test-prop": "test value"
+#      }
+#    }
+#  ]
+# }
+
+GET http://localhost:8001/hello-world-app/dev
+Accept: application/json
+
+###

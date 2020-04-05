@@ -10,8 +10,12 @@ class HelloWorldController {
     @Value("\${hello.world.username}")
     private lateinit var user: String
 
+    @Value("\${test-prop}")
+    private lateinit var testProp: String
+
+
     @GetMapping("/hello")
     fun hello(): String {
-        return "Hello, $user"
+        return "Hello, $user. There is also another property available: $testProp !"
     }
 }

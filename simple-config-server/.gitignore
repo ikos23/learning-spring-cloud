@@ -1,5 +1,6 @@
 HELP.md
 target/
+gitbasedir/
 .mvn/
 mvnw
 mvnw.cmd
