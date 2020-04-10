@@ -1,0 +1,34 @@
+# Two Peer Aware Eureka Servers
+# server.port is configured as when start app
+
+---
+spring:
+  profiles: eureka1
+  application:
+    name: simple-eureka-server-1
+eureka:
+  instance:
+    hostname: eureka1
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eureka2:8766/eureka/
+
+---
+spring:
+  profiles: eureka2
+  application:
+    name: simple-eureka-server-2
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eureka1:8765/eureka/
