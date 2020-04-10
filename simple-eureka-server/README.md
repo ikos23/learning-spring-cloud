@@ -2,3 +2,4 @@
 
 ---
 
+Two Peer Aware Eureka Servers (see `application.yml`)
