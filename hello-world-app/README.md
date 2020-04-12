@@ -17,3 +17,6 @@ spring.profiles.active=dev
 spring.cloud.config.uri=http://localhost:8001
 ```
 
+There is also Hystrix circuit breaker available
+for dummy HelloWorldController.
+
